@@ -1,0 +1,100 @@
+
+$fonts-path: "brix";
+$font-family-name: EONBrixSans;
+
+@font-face {
+  font-family: '#{$font-family-name}';
+  src: url('#{$fonts-path}/EON_BrixSansWeb-Regular.eot');
+  src: url('#{$fonts-path}/EON_BrixSansWeb-Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}/EON_BrixSansWeb-Regular.woff2') format('woff2'),
+  url('#{$fonts-path}/EON_BrixSansWeb-Regular.woff') format('woff'),
+  url('#{$fonts-path}/EON_BrixSansWeb-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: '#{$font-family-name}';
+  src: url('#{$fonts-path}/EON_BrixSansWeb-RegularItalic.eot');
+  src: url('#{$fonts-path}/EON_BrixSansWeb-RegularItalic.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}/EON_BrixSansWeb-RegularItalic.woff2') format('woff2'),
+  url('#{$fonts-path}/EON_BrixSansWeb-RegularItalic.woff') format('woff'),
+  url('#{$fonts-path}/EON_BrixSansWeb-RegularItalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: '#{$font-family-name}';
+  src: url('#{$fonts-path}/EON_BrixSansWeb-Medium.eot');
+  src: url('#{$fonts-path}/EON_BrixSansWeb-Medium.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}/EON_BrixSansWeb-Medium.woff2') format('woff2'),
+  url('#{$fonts-path}/EON_BrixSansWeb-Medium.woff') format('woff'),
+  url('#{$fonts-path}/EON_BrixSansWeb-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: '#{$font-family-name}';
+  src: url('#{$fonts-path}/EON_BrixSansWeb-MediumItalic.eot');
+  src: url('#{$fonts-path}/EON_BrixSansWeb-MediumItalic.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}/EON_BrixSansWeb-MediumItalic.woff2') format('woff2'),
+  url('#{$fonts-path}/EON_BrixSansWeb-MediumItalic.woff') format('woff'),
+  url('#{$fonts-path}/EON_BrixSansWeb-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: '#{$font-family-name}';
+  src: url('#{$fonts-path}/EON_BrixSansWeb-Bold.eot');
+  src: url('#{$fonts-path}/EON_BrixSansWeb-Bold.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}/EON_BrixSansWeb-Bold.woff2') format('woff2'),
+  url('#{$fonts-path}/EON_BrixSansWeb-Bold.woff') format('woff'),
+  url('#{$fonts-path}/EON_BrixSansWeb-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: '#{$font-family-name}';
+  src: url('#{$fonts-path}/EON_BrixSansWeb-BoldItalic.eot');
+  src: url('#{$fonts-path}/EON_BrixSansWeb-BoldItalic.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}/EON_BrixSansWeb-BoldItalic.woff2') format('woff2'),
+  url('#{$fonts-path}/EON_BrixSansWeb-BoldItalic.woff') format('woff'),
+  url('#{$fonts-path}/EON_BrixSansWeb-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: '#{$font-family-name}';
+  src: url('#{$fonts-path}/EON_BrixSansWeb-Black.eot');
+  src: url('#{$fonts-path}/EON_BrixSansWeb-Black.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}/EON_BrixSansWeb-Black.woff2') format('woff2'),
+  url('#{$fonts-path}/EON_BrixSansWeb-Black.woff') format('woff'),
+  url('#{$fonts-path}/EON_BrixSansWeb-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: '#{$font-family-name}';
+  src: url('#{$fonts-path}/EON_BrixSansWeb-BlackItalic.eot');
+  src: url('#{$fonts-path}/EON_BrixSansWeb-BlackItalic.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}/EON_BrixSansWeb-BlackItalic.woff2') format('woff2'),
+  url('#{$fonts-path}/EON_BrixSansWeb-BlackItalic.woff') format('woff'),
+  url('#{$fonts-path}/EON_BrixSansWeb-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}

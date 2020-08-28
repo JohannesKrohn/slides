@@ -1,0 +1,136 @@
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+// Include theme-specific fonts
+@import "typography/typography";
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #39393a;
+
+$mainColor: #f6f6f7;
+$headingColor: #fff;
+
+$mainFontSize: 32px;
+$mainFont: EONBrixSans, Helvetica, sans-serif;
+$headingFont: EONBrixSans, Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: none;
+$headingFontWeight: 900;
+$linkColor: #E3E000;
+$linkColorHover: lighten($linkColor, 15%);
+$selectionBackgroundColor: lighten($linkColor, 25%);
+
+$heading1Size: 2.75em;
+$heading2Size: 2.4em;
+$heading3Size: 1.8em;
+$heading4Size: 1.0em;
+
+section.has-light-background {
+  &, h1, h2, h3, h4, h5, h6 {
+    color: #222;
+  }
+}
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    text-align: right;
+
+    &.left {
+      text-align: left;
+    }
+  }
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-end;
+  opacity: .75;
+}
+
+p.abstract {
+  text-align: right;
+  font-size: .7em;
+
+  &.left {
+    text-align: left;
+  }
+
+}
+
+.reveal {
+  blockquote {
+    font-size: 1.25em;
+    font-style: normal;
+    text-align: left;
+    width: 100%;
+    font-weight: 700;
+    background-color: transparent;
+    box-shadow: none;
+
+    p {
+      line-height: 140%;
+      margin-bottom: .125em;
+    }
+
+    footer {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: .8em;
+      font-weight: 400;
+      text-align: right;
+    }
+  }
+}
+
+// People introduction
+
+.introduction {
+  display: flex;
+  margin: 3em 0;
+  .info {
+    margin-top: .5em;
+  }
+  .person {
+    flex: 1;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    p.name {
+      font-size: .9em;
+      font-weight: 700;
+      margin: 0 0 .25em;
+
+    }
+    p.job-title {
+      font-weight: 400;
+      font-size: .5em;
+      margin: 0;
+      color: rgba(255,255,255,.7);
+    }
+    .avatar {
+      border-radius: 100%;
+      width: 96px;
+      height: 96px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+  }
+
+}
