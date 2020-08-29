@@ -1,8 +1,7 @@
 include _includes/_head
 include _includes/_footerScripts
 include _includes/_parts
-include _svg/_test
-include _svg/_what_is_ux
+
 
 -
     var gradients =
@@ -21,8 +20,8 @@ include _svg/_what_is_ux
                 .content
                     h1 E.ON Design System, E.ON&nbsp;UI & AEM&nbsp;Foundation&nbsp;2020
                     .logo
-                        +DENlogo
-            +section
+                        include _svg/den-invertiert.svg
+            +section(data-state="make-it-pop")
                 h3.left Presenters
                 .introduction
                     .person.fragment(data-fragment-index="1")
@@ -57,7 +56,7 @@ include _svg/_what_is_ux
                             ul
                                 li Web Components in the Adobe Experience Manager (AEM)
                                 li Consolidation & Refactoring of AEM Components
-            section
+            section(data-state="testosteron")
                 blockquote
                     p
                         | The not-so-secret secret about creating effective design systems (or doing any great work, really):
@@ -106,21 +105,34 @@ include _svg/_what_is_ux
                     | UX / UI and the
                     br
                     | E.ON Design System
-            section(data-background-color="#E3E000")
-                section
+            section
+                section(data-background=gradients.limeLTR)
                     h1 Design system
                     p.right.phonetics {dɪˈzaɪn ˈsɪstɪm}
                     .text-block
                         p.abstract.left
-                            | A Design System is a set of interconnected patterns and shared practices coherently organized to aid in digital product design and development of products such as apps or websites. It may contain, but is not limited to, pattern libraries and design language, style guides, coded components, brand language and documentation for use of these.
+                            | A Design System is a set of #[b interconnected patterns] and shared practices coherently organized to aid in digital product design and development of products such as apps or websites. It may contain, but is not limited to, #[b pattern libraries and design language, style guides, coded components, brand language and documentation] for use of these.
                         p.right – From Wikipedia, the free encyclopedia
                 section(data-background-color="#E3E000")
                     .svg-container.r-stretch
-                        +whatIsUx
-
+                        include _svg/whatIsUX.svg
                 section(data-background-color="#E3E000")
                     .emoji-container.r-stack
                         p.emoji 🤯
-
-
+                section
+                    .emoji-container.r-stack
+                        p.emoji 🤓 #[b Focus]
+                section
+                    .offset-container
+                        .offset-headline
+                            h3.lime Our focus for the current cycle
+                        .text-block
+                            p.abstract.left
+                                | Our Styleguide is based on the very detailed #[span(style="font-weight: 900; color: #E3E000") Brand Guidelines] that are maintained by our magnificient Brand Team. These cover many aspects – we focus on the challenges that the digital realm brings.
+                            br
+                            h4.lime.left.fragment Accessibility
+                            h4.lime.left.fragment Usability
+                            h4.lime.left.fragment Consistent User Experience
     +scripts
+
+

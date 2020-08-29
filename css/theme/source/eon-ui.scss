@@ -54,6 +54,10 @@ section.has-light-background {
       &.left {
         text-align: left;
       }
+      &.lime {
+        color: #E3E000;
+      }
+
     }
     //headlines
   }
@@ -61,12 +65,15 @@ section.has-light-background {
   p {
     text-align: left;
     font-size: .7em;
+
     &.right {
       text-align: right;
     }
   }
 
-}// Reveal
+}
+
+// Reveal
 
 .logo {
   display: flex;
@@ -113,11 +120,14 @@ p.abstract {
       text-align: right;
     }
   }
+
   .text-block {
     width: 20em;
     float: right;
   }
-}//reveal
+}
+
+//reveal
 
 // People introduction
 
@@ -189,6 +199,7 @@ p.abstract {
 
 .svg-container {
   position: relative;
+
   svg {
     width: 100%;
     height: 100%;
@@ -197,4 +208,27 @@ p.abstract {
 
 p.emoji {
   font-size: 3em;
+}
+
+.offset-container {
+  $spacing: .75em;
+  display: flex;
+  padding: 0 $spacing;
+
+  .offset-headline {
+    flex: 2;
+    margin: 0.2em $spacing;
+
+    h1, h2, h3, h4, h5, h5 {
+      line-height: 100%;
+      &.bordeaux {
+        color: #B00402;
+      }
+    }
+  }
+
+  .text-block {
+    margin: 0 $spacing;
+    flex: 3;
+  }
 }
