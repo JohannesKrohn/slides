@@ -1,35 +1,62 @@
 include _includes/_head
 include _includes/_footerScripts
+include _includes/_parts
 include _svg/_test
+include _svg/_what_is_ux
+
+-
+    var gradients =
+            {
+                "limeLTR": "linear-gradient(to right, #CCCA00, #CCCA00 8.8294%, #DAD600 8.8294%, #DAD600 38.2341%, #E3E000 38.2341%) #E3E000",
+                "limeRTL": "linear-gradient(to left, #CCCA00, #CCCA00 8.8294%, #DAD600 8.8294%, #DAD600 38.2341%, #E3E000 38.2341%) #E3E000"
+            }
+
+
+
+
 +head
     .reveal
         .slides
-            section(data-background-color="#EA1B0A")
+            section(data-background="linear-gradient(to right, #B00402, #B00402 5.873%, #D51607 5.873%, #D51607 23.5317%, #EA1B0A 23.5317%)")
                 .content
-                    h1 E.ON Design System, E.ON&nbsp;UI & AEM&nbsp;Foundation 2020
+                    h1 E.ON Design System, E.ON&nbsp;UI & AEM&nbsp;Foundation&nbsp;2020
                     .logo
                         +DENlogo
-            section
+            +section
                 h3.left Presenters
                 .introduction
-                    .person.fragment
+                    .person.fragment(data-fragment-index="1")
                         .avatar
                             img(src="/img/krohn-johannes.jpg")
                         .info
                             p.name Johannes Krohn
                             p.job-title UX / UI Designer
-                    .person.fragment
+                        .topics.fragment
+                            ul
+                                li Curating the digital styleguide
+                                li Challenges in the corporate environment
+                                li The pattern library with web components
+                    .person.fragment(data-fragment-index="2")
                         .avatar
                             img(src="/img/kurtz-michael.jpg")
                         .info
                             p.name Michael Kurtz
                             p.job-title UX Specialist / Frontend Developer
-                    .person.fragment
+                        .topics.fragment
+                            ul
+                                li What are Web Components?
+                                li How to use Web Components?
+                                li Web Components and JavaScript frameworks!
+                    .person.fragment(data-fragment-index="3")
                         .avatar
                             img(src="/img/kutschker-janosch.png")
                         .info
                             p.name Janosch Kutschker
                             p.job-title Product Owner
+                        .topics.fragment
+                            ul
+                                li Web Components in the Adobe Experience Manager (AEM)
+                                li Consolidation & Refactoring of AEM Components
             section
                 blockquote
                     p
@@ -39,34 +66,61 @@ include _svg/_test
                         br
                     footer.fragment – Brad Frost
 
-            section
+            +sectionStack("#E3E000")
+                section(data-background=gradients.limeRTL)
+                    h2.left E.ON UX Platform
+                    br
+                    p.abstract.left.fragment Our mission is to give all apps and webs #[b one E.ON look & feel.]
+                    p.abstract.left.fragment Optimize #[b rankings and conversion rates.]
+                    p.abstract.left.fragment Increase usage and #[b simplify usability.]
+                section(data-background="#E3E000")
+                    h2
+                        | Our users are inside
+                        br
+                        | & outside of E.ON
+                    .text-block
+                        p.fragment The Guidelines are the basis for #[b our agencies] and our ambition is to make it easy for them to #[b adhere to the guidelines]
+                        p.fragment For the E.ON web sites we have the #[b content editors & creators] in mind. The brand is based around some #[b sophisticated layout] ideas that are sometime very challenging to get right in the daily work.
+                        p.fragment For the #[b transition from innogy to E.ON] we are trying to provide building blocks that #[b make the rebranding process faster]
+                        p.fragment And, of course, there are #[b E.ON customers] who spent 99% of their time on other sites and want to have a #[b pleasant experience with E.ON]
+                section(data-background=gradients.limeLTR)
+                    h3 Our Guides
+                    p.abstract.right.fragment Digital Styleguide
+                    p.abstract.right.fragment Digital Analytics
+                    p.abstract.right.fragment Search Engine Optimisation
+                    p.abstract.right.fragment User testing guidelines
+                    p.abstract.right.fragment.new Advertising
+                    p.abstract.right.fragment.new Motion Design
+                    p.abstract.right.fragment.new Social Media
                 section
-                    h2.left Central UX Platform
-                    p.abstract.left.fragment Our mission is to give all apps and webs one E.ON look & feel.
-                    p.abstract.left.fragment Optimize rankings and conversion rates.
-                    p.abstract.left.fragment Increase usage and simplify usability.
+                    h3 A Space to collaborate – eon.frontify.com
+                    p.abstract.fragment We host an image library with #[span(style="font-weight: 900;") 1810 Assets]
+                    p.abstract.fragment We have #[span(style="font-weight: 900;") 871 Users]
+                    p.abstract.fragment thereof #[span(style="font-weight: 900;") 272 Authors]
+                    p.abstract.fragment in #[span(style="font-weight: 900;") 112 Projects] that are managed by us
+                section(data-background="linear-gradient(to right, #CCCA00, #CCCA00 8.8294%, #DAD600 8.8294%, #DAD600 38.2341%, #E3E000 38.2341%)")
+                    h1 bit.ly/ux-platform
+
+            section(data-background="linear-gradient(to right, #B00402, #B00402 8.8294%, #D51607 8.8294%, #D51607 23.5317%, #EA1B0A 23.5317%)")
+                h1
+                    | UX / UI and the
+                    br
+                    | E.ON Design System
+            section(data-background-color="#E3E000")
                 section
-                    h3 Our users are inside & outside E.ON
-                section
-                    p.abstract We host an image library with #[span(style="font-weight: 900; color:#E3E000;") 1810 Assets]
-                    p.abstract.fragment We have #[span(style="font-weight: 900; color:#E3E000;") 871 Users]
-                    p.abstract.fragment thereof #[span(style="font-weight: 900; color:#E3E000;") 272 Authors]
-                    p.abstract.fragment in #[span(style="font-weight: 900; color:#E3E000;") 112 Projects] that are managed by us
-                section
-                    h3.left Our Guide
-                    ul
-                        li Digital Styleguide
-                        li Digital Analytics
-                        li Search Engine Optimisation
-            section
-                section(data-background-color="#1EA2B1")
-                    h1 Parent slide
-                    p.abstract Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.
-                section slide 01
-                section slide 01
-                section slide 01
-            section
-                .graphic
-                    +graphic01
+                    h1 Design system
+                    p.right.phonetics {dɪˈzaɪn ˈsɪstɪm}
+                    .text-block
+                        p.abstract.left
+                            | A Design System is a set of interconnected patterns and shared practices coherently organized to aid in digital product design and development of products such as apps or websites. It may contain, but is not limited to, pattern libraries and design language, style guides, coded components, brand language and documentation for use of these.
+                        p.right – From Wikipedia, the free encyclopedia
+                section(data-background-color="#E3E000")
+                    .svg-container.r-stretch
+                        +whatIsUx
+
+                section(data-background-color="#E3E000")
+                    .emoji-container.r-stack
+                        p.emoji 🤯
+
 
     +scripts

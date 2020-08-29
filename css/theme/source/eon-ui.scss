@@ -24,14 +24,14 @@ $linkColor: #E3E000;
 $linkColorHover: lighten($linkColor, 15%);
 $selectionBackgroundColor: lighten($linkColor, 25%);
 
-$heading1Size: 2.75em;
-$heading2Size: 2.4em;
-$heading3Size: 1.8em;
+$heading1Size: 2.6em;
+$heading2Size: 2.2em;
+$heading3Size: 1.6em;
 $heading4Size: 1.0em;
 
 section.has-light-background {
   &, h1, h2, h3, h4, h5, h6 {
-    color: #222;
+    color: #39393a;
   }
 }
 
@@ -40,15 +40,33 @@ section.has-light-background {
 @import "../template/theme";
 // ---------------------------------------------
 
-@for $i from 1 through 6 {
-  h#{$i} {
-    text-align: right;
 
-    &.left {
-      text-align: left;
+.reveal {
+  b {
+    font-weight: 900;
+  }
+
+  @for $i from 1 through 6 {
+    h#{$i} {
+      text-align: right;
+      margin-bottom: 2rem;
+
+      &.left {
+        text-align: left;
+      }
+    }
+    //headlines
+  }
+  //loop
+  p {
+    text-align: left;
+    font-size: .7em;
+    &.right {
+      text-align: right;
     }
   }
-}
+
+}// Reveal
 
 .logo {
   display: flex;
@@ -58,17 +76,24 @@ section.has-light-background {
 
 p.abstract {
   text-align: right;
-  font-size: .7em;
+  font-size: .9em;
 
   &.left {
     text-align: left;
+  }
+
+  &.right.new::after {
+    content: "New";
+    font-weight: 900;
+    position: absolute;
+    right: -2.4em;
   }
 
 }
 
 .reveal {
   blockquote {
-    font-size: 1.25em;
+    font-size: 1.75em;
     font-style: normal;
     text-align: left;
     width: 100%;
@@ -83,38 +108,48 @@ p.abstract {
 
     footer {
       color: rgba(255, 255, 255, 0.7);
-      font-size: .8em;
+      font-size: .5em;
       font-weight: 400;
       text-align: right;
     }
   }
-}
+  .text-block {
+    width: 20em;
+    float: right;
+  }
+}//reveal
 
 // People introduction
 
 .introduction {
   display: flex;
   margin: 3em 0;
+
   .info {
     margin-top: .5em;
   }
+
   .person {
     flex: 1;
     display: flex;
     text-align: left;
     flex-direction: column;
+    padding-right: 1em;
+
     p.name {
       font-size: .9em;
       font-weight: 700;
       margin: 0 0 .25em;
 
     }
+
     p.job-title {
       font-weight: 400;
       font-size: .5em;
       margin: 0;
-      color: rgba(255,255,255,.7);
+      color: #E3E000;
     }
+
     .avatar {
       border-radius: 100%;
       width: 96px;
@@ -131,6 +166,35 @@ p.abstract {
       }
     }
 
+    //avatar
+    .topics {
+      font-size: .5em;
+      line-height: 1.4;
+      color: rgba(255, 255, 255, .7);
+
+      ul {
+        list-style-type: square;
+        padding-inline-start: 1em;
+        margin-top: 1em;
+
+        li {
+          padding-bottom: .5em;
+        }
+      }
+    }
+
   }
 
+}
+
+.svg-container {
+  position: relative;
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+p.emoji {
+  font-size: 3em;
 }
