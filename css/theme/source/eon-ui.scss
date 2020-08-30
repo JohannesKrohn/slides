@@ -54,6 +54,7 @@ section.has-light-background {
       &.left {
         text-align: left;
       }
+
       &.lime {
         color: #E3E000;
       }
@@ -221,6 +222,7 @@ p.emoji {
 
     h1, h2, h3, h4, h5, h5 {
       line-height: 100%;
+
       &.bordeaux {
         color: #B00402;
       }
@@ -231,4 +233,67 @@ p.emoji {
     margin: 0 $spacing;
     flex: 3;
   }
+}
+// isotope
+
+.isotope-filters {
+  display: flex;
+  flex-wrap: wrap;
+}
+.image-grid {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  overflow: auto;
+
+  .img-container {
+    width: calc(100% / 5);
+
+    &.mobile {
+      width: calc(100% / 7);
+    }
+  }
+}
+
+.button-group {
+  margin-bottom: .3em;
+
+
+  button {
+    font-family: EONBrixSans, sans-serif;
+    font-weight: 700;
+    font-size: .4em;
+    display: inline-block;
+    padding: 0.5em 1.0em;
+    background: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid transparent;
+
+    &.is-checked {
+      background-color: none;
+      color: #fff;
+      border: 1px solid #fff
+    }
+
+    &:hover {
+      border-color: rgba(255, 255, 255, .3);
+    }
+
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+}
+
+.isotope-content {
+  height: 720px;
+
+  .grid-wrapper {
+    height: 580px;
+    overflow: scroll;
+  }
+
 }

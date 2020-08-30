@@ -4,6 +4,7 @@ mixin scripts
     script(src="plugin/markdown/markdown.js")
     script(src="plugin/highlight/highlight.js")
     script(src="plugin/zoom/zoom.js")
+    script(src="plugin/isotope.pkgd.min.js")
     script.
         // More info about initialization & config:
         // - https://revealjs.com/initialization/
@@ -14,8 +15,66 @@ mixin scripts
         progress: false,
 
         // Learn about plugins: https://revealjs.com/plugins/
-        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes,  RevealZoom]
+
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes,  RevealZoom],
+        dependencies: [
+                {src: 'plugin/skip-fragments/skip-fragments.js'},
+            ],
+            // Shortcut for showing all fragments
+            skipFragmentsShowShortcut: 'o',
+
+            // Shortcut for hiding all fragments
+            skipFragmentsHideShortcut: 'i'
         });
-        Reveal.on('testosteron', () => {
-            console.log('✨');
+        $(document).ready(function () {
+
+            // Isotope
+            // init Isotope
+            var $grid = $('.grid').isotope({
+                // options
+                itemSelector: '.grid-item',
+                masonry: {
+                    columnWidth: 25
+                }
+            });
+
+            // store filter for each group
+            var filters = {};
+
+            $('.isotope-filters').on('click', '.button', function (event) {
+                var $button = $(event.currentTarget);
+                console.log('filterGroup')
+                // get group key
+                var $buttonGroup = $button.parents('.button-group');
+                var filterGroup = $buttonGroup.attr('data-filter-group');
+                // set filter for group
+
+                filters[filterGroup] = $button.attr('data-filter');
+                // combine filters
+                var filterValue = concatValues(filters);
+                // set filter for Isotope
+                $grid.isotope({filter: filterValue});
+            });
+
+            // change is-checked class on buttons
+            $('.button-group').each(function (i, buttonGroup) {
+                var $buttonGroup = $(buttonGroup);
+                $buttonGroup.on('click', 'button', function (event) {
+                    $buttonGroup.find('.is-checked').removeClass('is-checked');
+                    var $button = $(event.currentTarget);
+                    $button.addClass('is-checked');
+                });
+            });
+
+            // flatten object by concatting values
+            function concatValues(obj) {
+                var value = '';
+                for (var prop in obj) {
+                    value += obj[prop];
+                }
+                return value;
+            }
+
+
         });
+

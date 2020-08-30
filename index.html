@@ -4,6 +4,7 @@
     <title>E.ON Design System</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="plugin/jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" href="dist/reset.css">
     <link rel="stylesheet" href="dist/reveal.css">
     <link rel="stylesheet" href="dist/theme/black.css" id="theme">
@@ -165,7 +166,7 @@
           <h1>UX / UI and the<br>E.ON Design System</h1>
         </section>
         <section>
-          <section data-background="linear-gradient(to right, #CCCA00, #CCCA00 8.8294%, #DAD600 8.8294%, #DAD600 38.2341%, #E3E000 38.2341%) #E3E000">
+          <section data-background="linear-gradient(to right, #CCCA00, #CCCA00 8.8294%, #DAD600 8.8294%, #DAD600 38.2341%, #E3E000 38.2341%) #E3E000" id="design-system">
             <h1>Design system</h1>
             <p class="right phonetics">{dɪˈzaɪn ˈsɪstɪm}</p>
             <div class="text-block">
@@ -2196,6 +2197,74 @@
             </div>
           </section>
         </section>
+        <section>
+          <div class="offset-container">
+            <div class="offset-headline">
+              <h3 class="lime">Challenges in the corporate context</h3>
+            </div>
+            <div class="text-block">
+              <p class="abstract left">Ideas bubble up. They may start with an idea in a single person’s mind. That idea is useful to a collaborator nearby.<br>Others realize gradually that they share the need. Eventually, an idea may — or may not—be relevant to everyone.</p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="isotope-content">
+            <div class="isotope-filters">
+              <div class="button-group" data-filter-group="region">
+                <button class="button" data-filter="*">all</button>
+                <button class="button" data-filter=".international">International</button>
+                <button class="button" data-filter=".CZ">Czechia</button>
+                <button class="button" data-filter=".de">Germany</button>
+                <button class="button" data-filter=".HU">Hungary</button>
+                <button class="button" data-filter=".it">Italy</button>
+                <button class="button" data-filter=".PL">Poland</button>
+                <button class="button" data-filter=".RO">Romania</button>
+                <button class="button" data-filter=".SE">Sweden</button>
+                <button class="button" data-filter=".UK">United Kingdom</button>
+              </div>
+              <div class="button-group" data-filter-group="viewport">
+                <button class="button" data-filter="*">all</button>
+                <button class="button" data-filter=".desktop">Desktop</button>
+                <button class="button" data-filter=".tablet">Tablet</button>
+                <button class="button" data-filter=".mobile">Mobile</button>
+              </div>
+            </div>
+            <div class="grid-wrapper">
+              <div class="image-grid grid">
+                <div class="img-container grid-item desktop de"><img src="img/pages/deDE.png"></div>
+                <div class="img-container grid-item tablet de"><img src="img/pages/deDE_tablet.png"></div>
+                <div class="img-container grid-item mobile de"><img src="img/pages/deDE_mobile.png"></div>
+                <div class="img-container grid-item desktop international"><img src="img/pages/eonCom.png"></div>
+                <div class="img-container grid-item tablet international"><img src="img/pages/eonCom_tablet.png"></div>
+                <div class="img-container grid-item mobile international"><img src="img/pages/eonCom_mobile.png"></div>
+                <div class="img-container grid-item desktop HU"><img src="img/pages/eonHU.png"></div>
+                <div class="img-container grid-item tablet HU"><img src="img/pages/eonHU_tablet.png"></div>
+                <div class="img-container grid-item mobile HU"><img src="img/pages/eonHU_mobile.png"></div>
+                <div class="img-container grid-item desktop CZ"><img src="img/pages/eonCZ.png"></div>
+                <div class="img-container grid-item tablet CZ"><img src="img/pages/eonCZ_tablet.png"></div>
+                <div class="img-container grid-item mobile CZ"><img src="img/pages/eonCZ_mobile.png"></div>
+                <div class="img-container grid-item desktop it"><img src="img/pages/eonIT.png"></div>
+                <div class="img-container grid-item tablet it"><img src="img/pages/eonIT_tablet.png"></div>
+                <div class="img-container grid-item mobile it"><img src="img/pages/eonIT_mobile.png"></div>
+                <div class="img-container grid-item desktop PL"><img src="img/pages/eonPL.png"></div>
+                <div class="img-container grid-item tablet PL"><img src="img/pages/eonPL_tablet.png"></div>
+                <div class="img-container grid-item mobile PL"><img src="img/pages/eonPL_mobile.png"></div>
+                <div class="img-container grid-item desktop RO"><img src="img/pages/eonRO.png"></div>
+                <div class="img-container grid-item tablet RO"><img src="img/pages/eonRO_tablet.png"></div>
+                <div class="img-container grid-item mobile RO"><img src="img/pages/eonRO_mobile.png"></div>
+                <div class="img-container grid-item desktop SE"><img src="img/pages/eonSE.png"></div>
+                <div class="img-container grid-item tablet SE"><img src="img/pages/eonSE_tablet.png"></div>
+                <div class="img-container grid-item mobile SE"><img src="img/pages/eonSE_mobile.png"></div>
+                <div class="img-container grid-item desktop UK"><img src="img/pages/eonUK.png"></div>
+                <div class="img-container grid-item tablet UK"><img src="img/pages/eonUK_tablet.png"></div>
+                <div class="img-container grid-item mobile UK"><img src="img/pages/eonUK_mobile.png"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <p>Spotting opportunities and triggering connections is part of the job, even if beyond what’s in their system core.</p>
+        </section>
       </div>
     </div>
     <script src="dist/reveal.js"></script>
@@ -2203,6 +2272,7 @@
     <script src="plugin/markdown/markdown.js"></script>
     <script src="plugin/highlight/highlight.js"></script>
     <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/isotope.pkgd.min.js"></script>
     <script>
       // More info about initialization & config:
       // - https://revealjs.com/initialization/
@@ -2213,10 +2283,67 @@
       progress: false,
       
       // Learn about plugins: https://revealjs.com/plugins/
-      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes,  RevealZoom]
+      
+      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes,  RevealZoom],
+      dependencies: [
+              {src: 'plugin/skip-fragments/skip-fragments.js'},
+          ],
+          // Shortcut for showing all fragments
+          skipFragmentsShowShortcut: 'o',
+      
+          // Shortcut for hiding all fragments
+          skipFragmentsHideShortcut: 'i'
       });
-      Reveal.on('testosteron', () => {
-          console.log('✨');
+      $(document).ready(function () {
+      
+          // Isotope
+          // init Isotope
+          var $grid = $('.grid').isotope({
+              // options
+              itemSelector: '.grid-item',
+              masonry: {
+                  columnWidth: 25
+              }
+          });
+      
+          // store filter for each group
+          var filters = {};
+      
+          $('.isotope-filters').on('click', '.button', function (event) {
+              var $button = $(event.currentTarget);
+              console.log('filterGroup')
+              // get group key
+              var $buttonGroup = $button.parents('.button-group');
+              var filterGroup = $buttonGroup.attr('data-filter-group');
+              // set filter for group
+      
+              filters[filterGroup] = $button.attr('data-filter');
+              // combine filters
+              var filterValue = concatValues(filters);
+              // set filter for Isotope
+              $grid.isotope({filter: filterValue});
+          });
+      
+          // change is-checked class on buttons
+          $('.button-group').each(function (i, buttonGroup) {
+              var $buttonGroup = $(buttonGroup);
+              $buttonGroup.on('click', 'button', function (event) {
+                  $buttonGroup.find('.is-checked').removeClass('is-checked');
+                  var $button = $(event.currentTarget);
+                  $button.addClass('is-checked');
+              });
+          });
+      
+          // flatten object by concatting values
+          function concatValues(obj) {
+              var value = '';
+              for (var prop in obj) {
+                  value += obj[prop];
+              }
+              return value;
+          }
+      
+      
       });
     </script>
   </body>

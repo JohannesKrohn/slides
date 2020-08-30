@@ -1,6 +1,7 @@
 include _includes/_head
 include _includes/_footerScripts
 include _includes/_parts
+include _includes/_regions_landing_pages
 
 
 -
@@ -21,6 +22,7 @@ include _includes/_parts
                     h1 E.ON Design System, E.ON&nbsp;UI & AEM&nbsp;Foundation&nbsp;2020
                     .logo
                         include _svg/den-invertiert.svg
+
             +section(data-state="make-it-pop")
                 h3.left Presenters
                 .introduction
@@ -106,7 +108,7 @@ include _includes/_parts
                     br
                     | E.ON Design System
             section
-                section(data-background=gradients.limeLTR)
+                section(data-background=gradients.limeLTR id="design-system")
                     h1 Design system
                     p.right.phonetics {dɪˈzaɪn ˈsɪstɪm}
                     .text-block
@@ -133,6 +135,44 @@ include _includes/_parts
                             h4.lime.left.fragment Accessibility
                             h4.lime.left.fragment Usability
                             h4.lime.left.fragment Consistent User Experience
+            section
+                .offset-container
+                    .offset-headline
+                        h3.lime Challenges in the corporate context
+                    .text-block
+                        p.abstract.left
+                            | Ideas bubble up. They may start with an idea in a single person’s mind. That idea is useful to a collaborator nearby.
+                            br
+                            | Others realize gradually that they share the need. Eventually, an idea may — or may not—be relevant to everyone.
+            section
+                .isotope-content
+                    .isotope-filters
+                        .button-group(data-filter-group="region")
+                            button.button(data-filter="*") all
+                            button.button(data-filter=".international") International
+                            button.button(data-filter=".CZ") Czechia
+                            button.button(data-filter=".de") Germany
+                            button.button(data-filter=".HU") Hungary
+                            button.button(data-filter=".it") Italy
+                            button.button(data-filter=".PL") Poland
+                            button.button(data-filter=".RO") Romania
+                            button.button(data-filter=".SE") Sweden
+                            button.button(data-filter=".UK") United Kingdom
+                        .button-group(data-filter-group="viewport")
+                            button.button(data-filter="*") all
+                            button.button(data-filter=".desktop") Desktop
+                            button.button(data-filter=".tablet") Tablet
+                            button.button(data-filter=".mobile") Mobile
+                    .grid-wrapper
+                        .image-grid.grid
+                            for img in imgs
+                                .img-container.grid-item(class=img.filter + " " + img.region)
+                                    img(src=img.url)
+
+
+
+            section
+                p Spotting opportunities and triggering connections is part of the job, even if beyond what’s in their system core.
     +scripts
 
 
