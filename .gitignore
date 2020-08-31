@@ -111,3 +111,4 @@ gen
 /node_modules/
 /build/
 /dist/
+!/img/sample-layout.mp4

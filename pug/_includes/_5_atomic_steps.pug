@@ -1,0 +1,32 @@
+mixin fiveAtomicSteps(op1=".3", op2=".3", op3=".3", op4=".3", op5=".3")
+    .container
+        .column.col-5
+            .content(style="opacity: "+ op1 + ";")
+                .svg-container.lime-bg(style="opacity: "+ op1 + ";")
+                    +atoms
+                h5.lime.left Atoms
+                p.copy Atoms are the smallest elements of the user interface, they cannot be broken down further without ceasing to be functional.
+        .column.col-5
+            .content(style="opacity: "+ op2 + ";")
+                .svg-container.lime-bg(style="opacity: "+ op2 + ";")
+                    +molecules
+                h5.lime.left Molecules
+                p.copy Molecules are relatively simple groups of UI elements functioning together as a unit. For example, a form label, search input, and button can join together to create a search form molecule.
+        .column.col-5
+            .content(style="opacity: "+ op3 + ";")
+                .svg-container.lime-bg(style="opacity: "+ op3 + ";")
+                    +organisms
+                h5.lime.left Organisms
+                p.copy Organisms are relatively complex UI components composed of groups of molecules and/or atoms and/or other organisms. These organisms form distinct sections of an interface.
+        .column.col-5
+            .content(style="opacity: "+ op4 + ";")
+                .svg-container.lime-bg(style="opacity: "+ op4 + ";")
+                    +templates
+                h5.lime.left Templates
+                p.copy Templates are page-level objects that place components into a layout and articulate the design’s underlying content structure.<br>In our current workflow these templates are created in the content management systems.
+        .column.col-5
+            .content(style="opacity: "+ op5 + ";")
+                .svg-container.lime-bg(style="opacity: "+ op5 + ";")
+                    +pages
+                h5.lime.left Pages
+                p.copy Pages are specific instances of templates that show what a UI looks like with real representative content in place.

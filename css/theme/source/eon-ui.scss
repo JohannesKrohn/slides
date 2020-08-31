@@ -28,6 +28,7 @@ $heading1Size: 2.6em;
 $heading2Size: 2.2em;
 $heading3Size: 1.6em;
 $heading4Size: 1.0em;
+$heading5Size: .8em;
 
 section.has-light-background {
   &, h1, h2, h3, h4, h5, h6 {
@@ -42,22 +43,42 @@ section.has-light-background {
 
 
 .reveal {
+  .scroll-container {
+    height: 50vh;
+    overflow: scroll;
+    img {
+      max-width: 95%;
+      max-height: initial;
+    }
+  }
+  h5 {
+    font-size: $heading5Size;
+  }
   b {
-    font-weight: 900;
+    font-weight: 700;
+  }
+  pre {
+    width: 100%;
   }
 
   @for $i from 1 through 6 {
     h#{$i} {
       text-align: right;
-      margin-bottom: 2rem;
+      margin-bottom: calc(.5em / #{$i});
+      line-height: 1;
 
       &.left {
         text-align: left;
       }
 
+      &.center {
+        text-align: center;
+      }
+
       &.lime {
         color: #E3E000;
       }
+
 
     }
     //headlines
@@ -70,6 +91,14 @@ section.has-light-background {
     &.right {
       text-align: right;
     }
+
+    &.copy {
+      font-size: .55em;
+      &.cite {
+        font-weight: 400;
+        opacity: .5;
+      }
+    }
   }
 
 }
@@ -80,11 +109,13 @@ section.has-light-background {
   display: flex;
   justify-content: flex-end;
   opacity: .75;
+
 }
 
 p.abstract {
   text-align: right;
   font-size: .9em;
+  font-width: 500;
 
   &.left {
     text-align: left;
@@ -123,7 +154,7 @@ p.abstract {
   }
 
   .text-block {
-    width: 20em;
+    width: 61.8034%;
     float: right;
   }
 }
@@ -139,6 +170,9 @@ p.abstract {
   .info {
     margin-top: .5em;
   }
+  &.big {
+    font-size: 1.25em;
+  }
 
   .person {
     flex: 1;
@@ -146,6 +180,7 @@ p.abstract {
     text-align: left;
     flex-direction: column;
     padding-right: 1em;
+    position: relative;
 
     p.name {
       font-size: .9em;
@@ -163,9 +198,10 @@ p.abstract {
 
     .avatar {
       border-radius: 100%;
-      width: 96px;
-      height: 96px;
+      width: 4em;
+      height: 4em;
       overflow: hidden;
+      z-index: 99;
 
       img {
         width: 100%;
@@ -209,15 +245,30 @@ p.abstract {
 
 p.emoji {
   font-size: 3em;
+  text-align: center;
 }
 
 .offset-container {
   $spacing: .75em;
   display: flex;
   padding: 0 $spacing;
+  &.swapped {
+    flex-direction: row-reverse;
+    .text-block {
+      width: 38.1966%;
+    }
+    .offset-headline {
+      width: 61.8034%;
+    }
+  }
+  &.fifty .svg-container {
+    margin-top: 1.5em;
+    width: 75%;
+
+  }
 
   .offset-headline {
-    flex: 2;
+    width: 38.1966%;
     margin: 0.2em $spacing;
 
     h1, h2, h3, h4, h5, h5 {
@@ -227,19 +278,23 @@ p.emoji {
         color: #B00402;
       }
     }
+    & h2 {
+      margin-top: -0.16em;
+    }
   }
 
   .text-block {
     margin: 0 $spacing;
-    flex: 3;
   }
 }
+
 // isotope
 
 .isotope-filters {
   display: flex;
   flex-wrap: wrap;
 }
+
 .image-grid {
   display: flex;
   width: 100%;
@@ -296,4 +351,42 @@ p.emoji {
     overflow: scroll;
   }
 
+}
+
+.illustration-fifty {
+  display: flex;
+  .content.illustration, .content.figure {
+    width: 50%;
+  }
+}
+
+.container {
+  display: flex;
+
+  .col-5 {
+    width: 20%;
+  }
+
+  .column {
+    margin: 0 .3em;
+
+
+    .svg-container {
+      margin-bottom: .5em;
+      padding: 0;
+      line-height: 0;
+      &.lime-bg {
+        background-color: rgba(#E3E000, .1);
+      }
+
+      svg {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.codepen-wrapper {
+  height: 100%;
+  min-height: 500px;
 }
