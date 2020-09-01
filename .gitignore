@@ -111,5 +111,6 @@ gen
 /node_modules/
 /build/
 /dist/
-!/img/sample-layout.mp4
 img/sample-layout.mp4
+/img/Comp 6.mp4
+*.mp4
