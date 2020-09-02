@@ -10,14 +10,16 @@ mixin scripts
         // - https://revealjs.com/initialization/
         // - https://revealjs.com/config/
         Reveal.initialize({
+
             margin: 0.1,
-        hash: true,
-        progress: false,
+            hash: true,
+            progress: false,
 
-        // Learn about plugins: https://revealjs.com/plugins/
 
-        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes,  RevealZoom],
-        dependencies: [
+            // Learn about plugins: https://revealjs.com/plugins/
+
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom],
+            dependencies: [
                 {src: 'plugin/skip-fragments/skip-fragments.js'},
             ],
             // Shortcut for showing all fragments

@@ -90,6 +90,7 @@ section.has-light-background {
     font-size: .7em;
     text-transform: lowercase;
 
+
     &.right {
       text-align: right;
     }
@@ -393,10 +394,23 @@ p.emoji {
   min-height: 500px;
 }
 
-.fifty-layout {
+.fifty-layout, .font-content {
   display: flex;
   .fifty-container {
     width: 50%;
     padding: 1em;
   }
+}
+.blink {
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+  0% {opacity: 1}
+  40% {opacity: 1}
+  50% {opacity: 0}
+  90% {opacity: 0}
+
 }

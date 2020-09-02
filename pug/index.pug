@@ -5,8 +5,6 @@ include _includes/_regions_landing_pages
 include _includes/_moodboard
 include _svg/_atomicSVG
 include _includes/_5_atomic_steps
-
-
 -
     var gradients =
             {
@@ -15,16 +13,12 @@ include _includes/_5_atomic_steps
                 "redLTR": "linear-gradient(to right, #D51607, #D51607 5.5728%, #EA1B0A 5.5728%, #EA1B0A 38.1966%, #39393a 38.1966%) #39393a",
                 "darkgreyLTR": "linear-gradient(to right, #1EA2B1, #1EA2B1 5.5728%, #404040 5.5728%, #404040 23.606%, #39393a 23.606%) #39393a"
             }
-
-
-
-
 +head
     .reveal
         .slides
             section(data-background="linear-gradient(to right, #B00402, #B00402 5.873%, #D51607 5.873%, #D51607 23.5317%, #EA1B0A 23.5317%)")
                 .content
-                    h1 °d lab to d lab_
+                    h1 d lab_
                     .logo
                         include _svg/den-invertiert.svg
             section
@@ -39,7 +33,7 @@ include _includes/_5_atomic_steps
                     | I think it is important to keep this in the back of our head, these guidelines build up on the excellent work that has been done and is in progress atm. We see ourselves as the curators for excellence inside the company.
 
             +section
-                h3.left Branding squad
+                h4.left the right mix of old masters & fresh minds
                 .introduction
                     .person.fragment(data-fragment-index="1")
                         .avatar
@@ -55,7 +49,7 @@ include _includes/_5_atomic_steps
                             p.job-title UX / UI Designer
                     .person.fragment(data-fragment-index="3")
                         .avatar
-                            img(src="/img/rock-kerstin.jpg")
+                            img(src="img/KR_Foto.png")
                         .info
                             p.name Kerstin Rock
                             p.job-title UX / UI Designer
@@ -66,6 +60,9 @@ include _includes/_5_atomic_steps
                             p.name Dan Modurano
                             p.job-title UX / UI Designer
 
+            section
+                h2.left.lime disclaimer
+                p.abstract.left as you know there are still white spots on the d lab map and this presentation is a shoulderview to show you where we currently are. we are happy to get your feedback.
 
             section(data-background=gradients.limeRTL)
                 h2.left Ideation
@@ -75,28 +72,49 @@ include _includes/_5_atomic_steps
                     p.abstract.left Clustering
                     p.abstract.left Review
                     p.abstract.left Repeat
-
             section
                 .isotope-content
                     .isotope-filters
                         .button-group(data-filter-group="region")
+                            button.button(data-filter=".painting") Alte Meister
                             button.button(data-filter=".moods") Moodboards
+                            button.button(data-filter=".ppt") Powerpoints
                             button.button(data-filter=".illu") Illustrations
-                            button.button(data-filter=".painting") Paintings
                             button.button(data-filter=".fractal") Fractals
                             button.button(data-filter=".iteration1") Iteration 1
                             button.button(data-filter=".iteration2") Iteration 2
-                            button.button(data-filter=".ppt") Powerpoints
                             button.button(data-filter="*") all
                     .grid-wrapper
                         .image-grid.grid
                             for img in moods
                                 .img-container.grid-item(class=img.tag)
                                     img(src=img.url)
+            section(data-background="#333334")
+                h1.left colors
+                p.copy.left reduction, increase contrast, 100% based on the e.on brand colors
+                .svg-container(style="width: 75%;")
+                    include _svg/color-scheme-01.svg
+            section(data-background="#333334")
+                section
+                    .font-content
+                        .svg-container(style="width: 30%")
+                            img(src="img/font/logo_wall-lime.svg")
+                        .text-block(style="width: 70%; padding: 1em;")
+                            h1.left font
+                            p.abstract.left Brix Sans stands for perfection, accuracy and a contemporary look.
+                            p.copy.left "Our goal was to create a simple, fluid and highly-precise overall look and feel. We felt inspired by modern German design — pure, reduced, thoughtful, distinctive. Step one was to draw constructed letter forms based on a mathematical grid. These basic, essential shapes formed the starting point of Brix Sans. We then applied typographical rules and viewing habits to the letters to lend them a harmonic rhythm and fluent legibility. A real typeface was born."
+                            p.copy.right – hannes van döhren
+                section
+                    .svg-container(style="height: 500px;")
+                        img(src="img/font/A-6.svg")
+                section
+                    .svg-container(style="height: 500px;")
+                        img(src="img/font/A-4.svg")
             section
-                section(data-background="linear-gradient(to right, #B00402, #B00402 8.8294%, #D51607 8.8294%, #D51607 23.5317%, #EA1B0A 23.5317%)")
-                    h3.left brand hierarchy
-                    .svg-container
+                section(data-background=gradients.darkgreyLTR)
+                    h1.left logo
+                    p.abstract.left(style="margin-bottom: 4em;") we are part of a brand hierarchy
+                    .svg-container(style="margin-bottom: 4em;")
                         include _svg/logo-complications.svg
                 section
                     .fifty-layout
@@ -104,15 +122,39 @@ include _includes/_5_atomic_steps
                             h3.left typographic logo
                             br
                             p.abstract.left.fragment(data-fragment-index="1") we went for a typo only solution to avoid the clutter of too many signets.
-                            p.abstract.left.fragment(data-fragment-index="3") this also makes it possible to just type our logo in plain text.
+                            p.abstract.copy.left.fragment(data-fragment-index="3") this also makes it possible to just type our logo in plain text.
+                            p.abstract.copy.left.fragment(data-fragment-index="3") banal character with great effect, expressiveness typing, future-oriented, continue writing, go forward, look ahead.
 
                         .fifty-container
                             h1.left.fragment.lime(data-fragment-index="2") d lab_
-
-
-
-
-
+                section
+                    .
+                        <p class="codepen" data-height="300" data-theme-id="39273" data-default-tab="html,result" data-user="Johannes-Krohn" data-slug-hash="de2c6101277cc48fd8713005e493443e" data-editable="true" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="d lab_">
+                        <span>See the Pen <a href="https://codepen.io/Johannes-Krohn/pen/de2c6101277cc48fd8713005e493443e">
+                        d lab_</a> by Johannes (<a href="https://codepen.io/Johannes-Krohn">@Johannes-Krohn</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                        </p>
+                        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            section
+                section
+                    h1.left layout principles
+                    p.abstract.left we took some liberties regarding the color scheme. to make our attachment to the e.on brand stable, we use the brand layers. to create a consistent appeal we created some rules around our usage as well.
+                section
+                    .svg-container(style="height: 700px")
+                        include _svg/layout-principleldpi.svg
+                section
+                    .img-container
+                        img(src="img/ppt/slide-01-example/Slide10.jpeg")
+                section
+                    .img-container
+                        img(src="img/ppt/slide-01-example/Slide27.jpeg")
+            section
+                section
+                    .offset-container
+                        .offset-headline
+                            h1.left d lab#[span(class="blink") _]
+                        .text-block
+                            p.abstract.left we are still in the process of finding and defining the d lab_ and we are happy to collect your feedback and #[b create the d lab_ together.]
 +scripts
 
 
