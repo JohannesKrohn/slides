@@ -1,0 +1,207 @@
+include _includes/_head
+include _includes/_footerScripts
+include _includes/_parts
+include _includes/_regions_landing_pages
+include _svg/_atomicSVG
+include _includes/_5_atomic_steps
+
+
+-
+    var gradients =
+            {
+                "limeLTR": "linear-gradient(to right, #CCCA00, #CCCA00 8.8294%, #DAD600 8.8294%, #DAD600 38.1966%, #E3E000 38.1966%) #E3E000",
+                "limeRTL": "linear-gradient(to left, #CCCA00, #CCCA00 8.8294%, #DAD600 8.8294%, #DAD600 38.1966%, #E3E000 38.1966%) #E3E000",
+                "redLTR": "linear-gradient(to right, #D51607, #D51607 5.5728%, #EA1B0A 5.5728%, #EA1B0A 38.1966%, #39393a 38.1966%) #39393a",
+                "darkgreyLTR": "linear-gradient(to right, #39393a, #39393a 5.5728%, #404040 5.5728%, #404040 23.606%, #39393a 23.606%) #39393a"
+            }
+
+-
+    var surveyStats = {
+        "views": [57, "Views"],
+        "starts": [37, "Starts"],
+        "responses": [10, "Responses"],
+        "completionRate": ["27%", "Completion Rate"],
+        "averageTime": ["2:18 Minutes", "Average Time"]
+    }
+
+
+
++head("E.ON UX Conference")
+    .reveal
+        .slides
+            section(data-background=gradients.mainTitle)
+                .content
+                    h3 welcome to the
+                    h1 UX Conference<br>#[span(style="color: #E3E000") – Day 2]
+                    .logo(style="margin-top: 3em;")
+                        include _svg/den-invertiert.svg
+            section
+                section
+                    h4.left Introduction
+                    .people__container.big
+                        .people
+                            .avatar
+                                img(src="/img/frischmuth-anette.jpg")
+                            .info
+                                p.name Anette Frischmuth
+                                p.job-title UX Expert
+                        .people
+                            .avatar
+                                img(src="/img/castritius-holger.jpg")
+                            .info
+                                p.name Holger&nbsp;Castritius
+                                p.job-title Head of UX
+                section
+                    .survey
+                        each value, key in surveyStats
+                            .keyfigure
+                                .name #{value[1]}
+                                .value #{value[0]}
+
+                    p.copy
+                        | In the break, if you find the time (2:28 min on average):
+                        br
+                    p.abstract.left #[b(style="color: #E3E000") bit.ly/ux-survey-2020]
+                section(data-background-iframe="https://ux-berlin.typeform.com/report/H6EPFsn8/gx7VEswGDObAb1qJ")
+
+
+            section
+                section
+                    .intro
+                        h4.left Agenda – Day 2
+                        p.copy the agenda can be found here: #[b(style="color: #E3E000") bit.ly/ux-agenda]
+                    .agenda-container
+                        .agenda-day
+                            ul.agenda
+                                li #[span(class="time") 1.30 pm	– 1.45 pm] #[span(class="topic") Welcome day 2]#[span(class="presenter") Anette Frischmuth]
+                                li #[span(class="time") 1.45 pm	– 2.15 pm] #[span(class="topic") Customer Care App, Hungary]#[span(class="presenter") Gábor Vitáris]
+                                li #[span(class="time") 2.15 pm	– 2.45 pm] #[span(class="topic") FEH  - Affordable Warmth, UK]#[span(class="presenter") Jannes Rump, Marc Elmer]
+                                li #[span(class="time") 2.45 pm	– 3.15 pm] #[span(class="topic") E.ON Home App (ex Smart Home, ex HEMS)]#[span(class="presenter") Sina Seliger-Gest]
+                                li #[span(class="time") 3.15 pm	– 3.30 pm] #[span(class="topic") Break]#[span(class="presenter") all]
+                                li #[span(class="time") 3.30 pm	– 4.00 pm] #[span(class="topic") CEX report]#[span(class="presenter") Lars Weber]
+                                li #[span(class="time") ] #[span(class="topic") data insights from AB Testing]#[span(class="presenter") Philip Nadidai, Alyssa Ritters]
+                                li #[span(class="time") 4.00 pm	– 4.30 pm] #[span(class="topic") Frontify deep dive with ESPresso Portal Design]#[span(class="presenter") Johannes Krohn]
+                                li #[span(class="time") 4.30 pm	– 5.00 pm] #[span(class="topic") Wrap up 2, Outlook Guild, Feedback]#[span(class="presenter") Anette Frischmuth, Holger Castritius, Manuel Wyszynski]
+                section
+                    .intro
+                        h4.left Agenda – Day 1
+                        p.copy the agenda can be found here: #[b(style="color: #E3E000") bit.ly/ux-agenda]
+                    .agenda-container
+                        .agenda-day
+                            ul.agenda
+                                li #[span(class="time") 1.30 pm	– 2.00 pm] #[span(class="topic") Welcome, Introductions, Agenda, Rules]#[span(class="presenter") Anette&nbsp;Frischmuth, Holger&nbsp;Castritius]
+                                li #[span(class="time") 2.00 pm	– 2.30 pm] #[span(class="topic") Frontify Updates, Media Libary, Advertising Guide]#[span(class="presenter") Holger, Johannes]
+                                li #[span(class="time") 2.30 pm	– 3.00 pm] #[span(class="topic") New UK User Testing Tool - UserZoom]#[span(class="presenter") Andrew Fairey]
+                                li #[span(class="time") 3.00 pm	– 3.15 pm] #[span(class="topic") Break]#[span(class="presenter") all]
+                                li #[span(class="time") 3.15 pm	– 3.45 pm] #[span(class="topic") Launch App Development Guild / UX Topic Cluster]#[span(class="presenter") Manuel Wyszynski, Jan Lisiak, Anette&nbsp;Frischmuth]
+                                li #[span(class="time") 3.45 pm	– 4.45 pm] #[span(class="topic") E.ON UI, web components and AEM Foundation 2020]#[span(class="presenter") Johannes&nbsp;Krohn, Michael Kurtz, Janosch Kutschker]
+                                li #[span(class="time") 4.45 pm	– 4.50 pm] #[span(class="topic") Break]#[span(class="presenter") all]
+                                li #[span(class="time") 4.50 pm	– 5.00 pm] #[span(class="topic") New Navigation "My E.ON", Germany]#[span(class="presenter") Simone Kofler ]
+                                li #[span(class="time") 5.00 pm	– 5.10 pm] #[span(class="topic") Wrap-up day 1, Survey]#[span(class="presenter") Anette&nbsp;Frischmuth, Johannes&nbsp;Krohn]
+
+
+            section
+                section
+                    h2.lime Day 1
+                section
+                    .intro
+                        h4 Frontify Updates, Media Libary, Advertising Guide
+                        p.abstract Holger&nbsp;Castritius, Johannes&nbsp;Krohn
+                section
+                    .intro
+                        h4 New UK User Testing Tool - UserZoom
+                        p.abstract Andrew Fairey
+                section
+                    .intro
+                        h4 Break
+                        p.abstract back at 15:15 pm
+                        p.abstract.right Take the survey: #[b(style="color: #E3E000") bit.ly/ux-survey-2020]
+                section
+                    .intro
+                        h4 Launch App Development Guild / UX Topic Cluster
+                        p.abstract Manuel Wyszynski, Jan Lisiak, Anette&nbsp;Frischmuth
+                section
+                    .intro
+                        h4 E.ON UI, web components and AEM Foundation 2020
+                        p.abstract Johannes&nbsp;Krohn, Michael Kurtz, Janosch Kutschker
+                section
+                    .intro
+                        h4 Break
+                section
+                    .intro
+                        p.copy.right(style="color: #E3E000") up next, at 4:50 pm:
+                        h4 New Navigation "My E.ON", Germany
+                        p.abstract Simone Kofler, eon.de UX
+                section
+                    .intro
+                        h4 Wrap-up day 1, Survey
+                        p.abstract Anette Frischmuth, Johannes&nbsp;Krohn
+                section
+                    section(data-background=gradients.darkgreyLTR)
+                        .intro
+                            h4.left Survey Insights
+                            p.copy We send out a survey to get to know our audience and gather information #[b(style="color: #E3E000") These are the key findings]
+                        .survey
+                            each value, key in surveyStats
+                                .keyfigure.fragment
+                                    .name #{value[1]}
+                                    .value #{value[0]}
+                    section(data-background-iframe="https://ux-berlin.typeform.com/report/H6EPFsn8/gx7VEswGDObAb1qJ")
+            section
+                section
+                    .intro
+                        h4.left Agenda – Day 2
+                        p.copy the agenda can be found here: #[b(style="color: #E3E000") bit.ly/ux-agenda]
+                    .agenda-container
+                        .agenda-day
+                            ul.agenda
+                                li #[span(class="time") 1.45 pm	– 2.15 pm] #[span(class="topic") Customer Care App, Hungary]#[span(class="presenter") Gábor Vitáris]
+                                li #[span(class="time") 2.15 pm	– 2.45 pm] #[span(class="topic") FEH  - Affordable Warmth, UK]#[span(class="presenter") Jannes Rump, Marc Elmer]
+                                li #[span(class="time") 2.45 pm	– 3.15 pm] #[span(class="topic") E.ON Home App (ex Smart Home, ex HEMS)]#[span(class="presenter") Sina Seliger-Gest]
+                                li #[span(class="time") 3.15 pm	– 3.30 pm] #[span(class="topic") Break]#[span(class="presenter") all]
+                                li #[span(class="time") 3.30 pm	– 4.00 pm] #[span(class="topic") CEX report]#[span(class="presenter") Lars Weber]
+                                li #[span(class="time") ] #[span(class="topic") data insights from AB Testing]#[span(class="presenter") Philip Nadidai, Alyssa Ritters]
+                                li #[span(class="time") 4.00 pm	– 4.30 pm] #[span(class="topic") Frontify deep dive with ESPresso Portal Design]#[span(class="presenter") Johannes Krohn]
+                                li #[span(class="time") 4.30 pm	– 5.00 pm] #[span(class="topic") Wrap up 2, Outlook Guild, Feedback]#[span(class="presenter") Anette Frischmuth, Holger Castritius, Manuel Wyszynski]
+                section
+                    .intro
+                        p.copy.right #[b(style="color: #E3E000") up next at 1.45 pm]
+                        h4 Customer Care App, Hungary
+                        p.abstract Gábor Vitáris
+                section
+                    .intro
+                        p.copy.right #[b(style="color: #E3E000") up next at 2.15 pm]
+                        h4 FEH  - Affordable Warmth, UK
+                        p.abstract Jannes Rump, Marc Elmer
+                section
+                    .intro
+                        p.copy.right #[b(style="color: #E3E000") up next at 2.45 pm]
+                        h4 E.ON Home App
+                        p.abstract Sina Seliger-Gest
+                section
+                    .intro
+                        p.copy.right #[b(style="color: #E3E000") up next at 3.15 pm]
+                        h4 Break
+                        p.abstract all
+                section
+                    .intro
+                        p.copy.right #[b(style="color: #E3E000") up next at 3.30 pm]
+                        h4 CEX report, data insights from AB Testing
+                        p.abstract Lars Weber, Philip Nadidai, Alyssa Ritters
+                section
+                    .intro
+                        p.copy.right #[b(style="color: #E3E000") up next at 4.00 pm]
+                        h4 Frontify deep dive with ESPresso Portal Design
+                        p.abstract Johannes Krohn
+                section
+                    .intro
+                        p.copy.right #[b(style="color: #E3E000") up next at 4.30 pm]
+                        h4 Wrap up 2, Outlook Guild, Feedback
+                        p.abstract Anette Frischmuth, Holger Castritius, Manuel Wyszynski
+
+
+
+
+    +scripts
+
+

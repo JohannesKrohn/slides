@@ -46,17 +46,21 @@ section.has-light-background {
   .scroll-container {
     height: 50vh;
     overflow: scroll;
+
     img {
       max-width: 95%;
       max-height: initial;
     }
   }
+
   h5 {
     font-size: $heading5Size;
   }
+
   b {
     font-weight: 700;
   }
+
   pre {
     width: 100%;
   }
@@ -94,6 +98,7 @@ section.has-light-background {
 
     &.copy {
       font-size: .55em;
+
       &.cite {
         font-weight: 400;
         opacity: .5;
@@ -163,19 +168,20 @@ p.abstract {
 
 // People introduction
 
-.introduction {
+.people__container {
   display: flex;
   margin: 3em 0;
 
-  .info {
-    margin-top: .5em;
-  }
   &.big {
     font-size: 1.25em;
   }
 
-  .person {
-    flex: 1;
+  &.right {
+    justify-content: flex-end;
+  }
+
+  .people {
+    flex-basis: 33%;
     display: flex;
     text-align: left;
     flex-direction: column;
@@ -230,9 +236,18 @@ p.abstract {
       }
     }
 
+    //topics
+
+
   }
 
+  //people
 }
+
+.info {
+  margin-top: .5em;
+}
+
 
 .svg-container {
   position: relative;
@@ -252,15 +267,19 @@ p.emoji {
   $spacing: .75em;
   display: flex;
   padding: 0 $spacing;
+
   &.swapped {
     flex-direction: row-reverse;
+
     .text-block {
       width: 38.1966%;
     }
+
     .offset-headline {
       width: 61.8034%;
     }
   }
+
   &.fifty .svg-container {
     margin-top: 1.5em;
     width: 75%;
@@ -278,6 +297,7 @@ p.emoji {
         color: #B00402;
       }
     }
+
     & h2 {
       margin-top: -0.16em;
     }
@@ -355,6 +375,7 @@ p.emoji {
 
 .illustration-fifty {
   display: flex;
+
   .content.illustration, .content.figure {
     width: 50%;
   }
@@ -375,6 +396,7 @@ p.emoji {
       margin-bottom: .5em;
       padding: 0;
       line-height: 0;
+
       &.lime-bg {
         background-color: rgba(#E3E000, .1);
       }
@@ -389,4 +411,76 @@ p.emoji {
 .codepen-wrapper {
   height: 100%;
   min-height: 500px;
+}
+
+// Agenda
+.agenda-container {
+  width: 100%;
+  display: flex;
+}
+
+.agenda-day {
+  flex: 1;
+
+  h5 {
+    margin-bottom: 1em;
+  }
+}
+
+ul.agenda {
+  font-size: .6em;
+  list-style: none;
+  width: 100%;
+  margin: 0;
+
+  li {
+    margin-bottom: 1.25em;
+    display: flex;
+    text-align: left;
+
+    span {
+      display: block;
+
+      &.time {
+        width: 20%;
+        text-align: left;
+        color: rgba(255, 255, 255, .6);
+      }
+
+      &.topic {
+        width: 50%;
+        margin-left: 16px;
+        text-align: left;
+      }
+
+      &.presenter {
+        margin-left: 16px;
+        width: 30%;
+        color: rgba(255, 255, 255, .6);
+      }
+    }
+  }
+}
+
+.intro {
+  margin-bottom: 2em;
+}
+
+.survey {
+  display: flex;
+
+  .keyfigure {
+    margin-right: 1em;
+    font-size: 1.25em;
+    text-align: left;
+
+    .name {
+      font-size: .5em;
+      margin-bottom: .5em;
+    }
+
+    .value {
+
+    }
+  }
 }

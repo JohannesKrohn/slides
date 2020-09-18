@@ -1,0 +1,8 @@
+mixin peopleBit(name="Johannes Krohn", jobTitle="UX / UI Designer", imgSrc="/img/krohn-johannes.jpg")
+    .people&attributes(attributes)
+        .avatar
+            img(src=imgSrc)
+        .info
+            p.name= name
+            p.job-title= jobTitle
+        block

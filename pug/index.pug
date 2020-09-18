@@ -1,23 +1,11 @@
 include _includes/_head
 include _includes/_footerScripts
 include _includes/_parts
+include _includes/_variables
 include _includes/_regions_landing_pages
 include _svg/_atomicSVG
 include _includes/_5_atomic_steps
-
-
--
-    var gradients =
-            {
-                "limeLTR": "linear-gradient(to right, #CCCA00, #CCCA00 8.8294%, #DAD600 8.8294%, #DAD600 38.1966%, #E3E000 38.1966%) #E3E000",
-                "limeRTL": "linear-gradient(to left, #CCCA00, #CCCA00 8.8294%, #DAD600 8.8294%, #DAD600 38.1966%, #E3E000 38.1966%) #E3E000",
-                "redLTR": "linear-gradient(to right, #D51607, #D51607 5.5728%, #EA1B0A 5.5728%, #EA1B0A 38.1966%, #39393a 38.1966%) #39393a",
-                "darkgreyLTR": "linear-gradient(to right, #1EA2B1, #1EA2B1 5.5728%, #404040 5.5728%, #404040 23.606%, #39393a 23.606%) #39393a"
-            }
-
-
-
-
+include _includes/_people
 +head
     .reveal
         .slides
@@ -28,30 +16,21 @@ include _includes/_5_atomic_steps
                         include _svg/den-invertiert.svg
             +section(data-state="make-it-pop")
                 h3.left Presenters
-                .introduction
-                    .person.fragment(data-fragment-index="1")
-                        .avatar
-                            img(src="/img/krohn-johannes.jpg")
-                        .info
-                            p.name Johannes Krohn
-                            p.job-title UX / UI Designer
+
+                .people__container
+                    +peopleBit(class="fragment" data-fragment-index="1")
                         .topics.fragment
                             ul
                                 li Curating the digital styleguide
                                 li Challenges in the corporate environment
                                 li The pattern library with web components
-                    .person.fragment(data-fragment-index="2")
-                        .avatar
-                            img(src="/img/kurtz-michael.jpg")
-                        .info
-                            p.name Michael Kurtz
-                            p.job-title UX Specialist / Frontend Developer
+                    +peopleBit("Michael Kurtz","UX Specialist / Frontend Developer","/img/kurtz-michael.jpg")(class="fragment" data-fragment-index="2")
                         .topics.fragment
                             ul
                                 li What are Web Components
                                 li How to use Web Components
                                 li Web Components in Storybook
-                    .person.fragment(data-fragment-index="3")
+                    .people.fragment(data-fragment-index="3")
                         .avatar
                             img(src="/img/kutschker-janosch.png")
                         .info
@@ -142,7 +121,7 @@ include _includes/_5_atomic_steps
                             p.abstract.left
                                 | “Design systems provide a convenient, centralized, and #[b evolving map] of a brand’s known product territories with directional pointers to #[b help you explore new regions.”]
                             p.copy.right — Chris Messina, tech evangelist and former developer experience lead at Uber
-                            p.abstract.left “Understanding not only the what, but the why, behind the design of a system is critical to creating an #[b exceptional user experience.] Defining and adhering to standards is how we create that understanding.”
+                            p.abstract.left #[b “Understanding not only the what, but the why,] behind the design of a system is critical to creating an #[b exceptional user experience.] Defining and adhering to standards is how we create that understanding.”
                             p.copy.right — Marco Suarez, product designers at InVision
                     aside(class="notes")
                         ul
@@ -150,15 +129,6 @@ include _includes/_5_atomic_steps
                             li it allows iterative approaches while keeping the main concepts in focus
 
             section
-                section(data-background-color="#E3E000")
-                    .svg-container.r-stretch
-                        include _svg/whatIsUX.svg
-                section(data-background-color="#E3E000")
-                    .emoji-container
-                        p.emoji 🤯
-                section
-                    .emoji-container.r-stack
-                        p.emoji 🤓 #[b Focus]
                 section
                     .offset-container
                         .offset-headline
@@ -341,13 +311,8 @@ include _includes/_5_atomic_steps
                         include _svg/web-components-strategy.svg
             section(data-background=gradients.darkgreyLTR)
                 h2.right.fragment.fade-out Handing over
-                .introduction.big
-                    .person.fragment(data-fragment-index="2")
-                        .avatar
-                            img(src="/img/kurtz-michael.jpg")
-                        .info
-                            p.name Michael Kurtz
-                            p.job-title UX Specialist / Frontend Developer
+                .people__container.big
+                    +peopleBit("Michael Kurtz","UX Specialist / Frontend Developer","/img/kurtz-michael.jpg")
                         .topics
                             ul
                                 li What are Web Components?

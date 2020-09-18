@@ -1,0 +1,21 @@
+include _includes/_head
+include _includes/_footerScripts
+include _includes/_variables
+include _includes/_people
+
++head("Frontify, Sketch, Projects")
+    .reveal
+        .slides
+            // Each section is a slide
+            section(data-background=gradients.mainTitleReversed)
+                h1.left Welcome
+                .people__container.big
+                    +peopleBit(class="fragment")
+            section
+                section
+                    p At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+                section
+                    p nested slides are vertically stacked
+
+    // this needs to be present to make reveal and the libaries work
+    +scripts

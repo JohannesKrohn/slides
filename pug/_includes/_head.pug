@@ -1,8 +1,9 @@
-mixin head
+mixin head(title="E.ON Design System")
     doctype html
     html
-        head
-            title E.ON Design System
+        head(profile="http://www.w3.org/2005/10/profile")
+            title #{title}
+            link(rel="icon" type="image/png" href="img/favicon-32x32.png")
             meta(charset="utf-8")
             meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
             script(src="plugin/jquery-3.5.1.min.js")
