@@ -10,12 +10,91 @@ include _includes/_people
             section(data-background=gradients.mainTitleReversed)
                 h1.left Welcome
                 .people__container.big
-                    +peopleBit(class="fragment")
+                    +peopleBit
+                        .topics
+                            ul
+                                li Visual Communication
+                                li Freelance work for Start ups and companies for about ten years in berlin
             section
                 section
-                    p At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+                    .offset-container
+                        .offset-headline
+                            h4 Frontify, Projects and the Sketch Library
+                        .text-block
+                            p.copy I will use my time to quickly walk you through how we supported an internal project to shwocase how you can use frontify to make your life and work easier.
+                            ul
+                                li Frontify, general overview
+                                li ESPresso, demo project
+                                li Additionally if we have time: Using the Design System Library for Sketch
                 section
-                    p nested slides are vertically stacked
-
-    // this needs to be present to make reveal and the libaries work
+                    .offset-container
+                        .offset-headline
+                            h3 Frontify
+                        .text-block
+                            p.abstract.left What does it do?
+                            p.copy It is a mixture of confluence, jira and zeplin. It cannot not replace jira or confluence but works well alongside both.
+            section
+                section
+                    .offset-container
+                        .offset-headline
+                            h3 Filling the project space
+                        .text-block
+                            p.copy One of the things that Frontify provides that for example zeplin and figma are missing is a project space where you can also host files. That is convenient for handover and a detailed briefing.
+                            ul
+                                li #[a(href="https://eon.frontify.com/projects/71/future-energy-home/1354" target="_blank") Journey Maps]
+                                li #[a(href="https://eon.frontify.com/projects/220/espresso-1587630932/2221" target="_blank") Development ready assets]
+                                li #[a(href="https://eon.frontify.com/projects/220/espresso-1587630932/1559" target="_blank") Additional or detailed guidances]
+                                li #[a(href="https://eon.frontify.com/screens/23440" target="_blank") Secondary Studies]
+                                li #[a(href="https://eon.frontify.com/screens/21723/annotation/2199" target="_blank") Deep links to comments]
+                section(data-background=gradients.limeLTR)
+                    .offset-container
+                        .offset-headline
+                            h1 Jakob’s Law
+                        .text-block
+                            p.abstract.left Users spend most of their time on other sites. This means that #[b users prefer your site to work the same way as all the other sites they already know.]
+                            p.copy.right – Jakob Nielsen
+                section
+                    .offset-container
+                        .offset-headline
+                            h3 Project views
+                        .text-block
+                            p.copy Each project has a customisable workflow view that follows the kanban board princibles with multiple swim lanes.
+                            ul
+                                li #[a(href="https://eon.frontify.com/workflows/220/espresso-1587630932" target="_blank") Workflow View]
+                                li #[a(href="https://eon.frontify.com/briefings/220/espresso-1587630932" target="_blank") Project Information view]
+                                li #[a(href="https://eon.frontify.com/activity/220/espresso-1587630932" target="_blank") Activity view]
+            section
+                section
+                    .offset-container
+                        .offset-headline
+                            h3.lime ESPresso
+                        .text-block
+                            p.copy Marc Daseking, Henning Block and Anish Nagaraj reached out to us for UX / UI Design support
+                            p.copy The Espresso platform intends to create a digitally enabled advised and non-advised self-service portal for teams to help themselves in resolving or fulfilling different incidents which is otherwise taken care by an EPS representative or a guided Gitlab CI pipeline.
+                            p.copy #[a(href="https://eon.frontify.com/projects/220/espresso-1587630932" target="_blank") The Frontify Project Space]
+                            p.copy #[a(href="https://confluence.dev.eon.com/display/CURS/Espresso+-+Self+Service+Portal" target="_blank") The Confluence Project Space]
+                section
+                    .offset-container
+                        .offset-headline
+                            h3.lime Design process
+                        .text-block
+                            p.copy We have been tasked with a similar platform in 2017 and in a kick off agreed to work off that base.
+                            p.copy #[a(href="https://eon.frontify.com/projects/220/espresso-1587630932/1569" target="_blank") Version 0.0.0]
+                            p.copy.fragment(data-fragment-index="1") Our first step was a simple update to the latest state of our UI patterns
+                            p.copy.fragment(data-fragment-index="1") #[a(href="https://eon.frontify.com/projects/220/espresso-1587630932/1769" target="_blank") Version 0.1.0]
+                            p.copy.fragment(data-fragment-index="2") The team went ahead and created a working version of these layouts. They even went ahead and bravely were some of the first to use the newly created E.ON UI components
+                            p.copy.fragment(data-fragment-index="2") #[a(href="https://espresso.eon.tools/ui/essp-tailor-app" target="_blank") ESPresso in the wild]
+                            p.copy.fragment(data-fragment-index="3") We used the classic screenshots and comment workflow to give some hints and comments.
+                            p.copy.fragment(data-fragment-index="3") #[a(href="https://eon.frontify.com/projects/220/espresso-1587630932/2085" target="_blank") Review]
+                section
+                    .offset-container
+                        .offset-headline
+                            h3.lime UX Problems
+                        .text-block
+                            p.copy We gathered some feedback from internal testing in general. To get a better understanding were the pain points are, we did a user Interviews with two developers and are now digesting the feedback and we are going back to some task analysis and created some new layouts.
+                            p.copy #[a(href="https://miro.com/app/board/o9J_km7Rkd4=/" target="_blank") We gathered the feedback on a miro board, that allows to cluster and visualise were pain points are]
+                            p.copy The latest iteration of the designs
+                            p.copy #[a(href="https://eon.frontify.com/projects/220/espresso-1587630932/2320" target="_blank") Version 0.2.0]
+            section
+                h4 Thank you for your time!
     +scripts
