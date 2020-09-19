@@ -12,3 +12,66 @@ mixin sectionStack(bgColor="")
 mixin note
     aside(class="notes")
         block
+
+mixin agendaDayOne
+    section
+        section
+            .intro
+                h4.left Agenda – Day 1
+                p.copy the agenda can be found here: #[b(style="color: #E3E000") bit.ly/ux-agenda]
+            .agenda-container
+                .agenda-day
+                    ul.agenda
+                        li #[span(class="time") 1.30 pm	– 2.00 pm] #[span(class="topic") Welcome, Introductions, Agenda, Rules]#[span(class="presenter") Anette&nbsp;Frischmuth, Holger&nbsp;Castritius]
+                        li #[span(class="time") 2.00 pm	– 2.30 pm] #[span(class="topic") Frontify Updates, Media Libary, Advertising Guide]#[span(class="presenter") Holger, Johannes]
+                        li #[span(class="time") 2.30 pm	– 3.00 pm] #[span(class="topic") New UK User Testing Tool - UserZoom]#[span(class="presenter") Andrew Fairey]
+                        li #[span(class="time") 3.00 pm	– 3.15 pm] #[span(class="topic") Break]#[span(class="presenter") all]
+                        li #[span(class="time") 3.15 pm	– 3.45 pm] #[span(class="topic") Launch App Development Guild / UX Topic Cluster]#[span(class="presenter") Manuel Wyszynski, Jan Lisiak, Anette&nbsp;Frischmuth]
+                        li #[span(class="time") 3.45 pm	– 4.45 pm] #[span(class="topic") E.ON UI, web components and AEM Foundation 2020]#[span(class="presenter") Johannes&nbsp;Krohn, Michael Kurtz, Janosch Kutschker]
+                        li #[span(class="time") 4.45 pm	– 4.50 pm] #[span(class="topic") Break]#[span(class="presenter") all]
+                        li #[span(class="time") 4.50 pm	– 5.00 pm] #[span(class="topic") New Navigation "My E.ON", Germany]#[span(class="presenter") Simone Kofler ]
+                        li #[span(class="time") 5.00 pm	– 5.10 pm] #[span(class="topic") Wrap-up day 1, Survey]#[span(class="presenter") Anette&nbsp;Frischmuth, Johannes&nbsp;Krohn]
+        section
+            .intro
+                h4 Frontify Updates, Media Libary, Advertising Guide
+                p.abstract Holger&nbsp;Castritius, Johannes&nbsp;Krohn
+        section
+            .intro
+                h4 New UK User Testing Tool - UserZoom
+                p.abstract Andrew Fairey
+        section
+            .intro
+                h4 Break
+                p.abstract back at 15:15 pm
+                p.abstract.right Take the survey: #[b(style="color: #E3E000") bit.ly/ux-survey-2020]
+        section
+            .intro
+                h4 Launch App Development Guild / UX Topic Cluster
+                p.abstract Manuel Wyszynski, Jan Lisiak, Anette&nbsp;Frischmuth
+        section
+            .intro
+                h4 E.ON UI, web components and AEM Foundation 2020
+                p.abstract Johannes&nbsp;Krohn, Michael Kurtz, Janosch Kutschker
+        section
+            .intro
+                h4 Break
+        section
+            .intro
+                p.copy.right(style="color: #E3E000") up next, at 4:50 pm:
+                h4 New Navigation "My E.ON", Germany
+                p.abstract Simone Kofler, eon.de UX
+        section
+            .intro
+                h4 Wrap-up day 1, Survey
+                p.abstract Anette Frischmuth, Johannes&nbsp;Krohn
+        section
+            section(data-background=gradients.darkgreyLTR)
+                .intro
+                    h4.left Survey Insights
+                    p.copy We send out a survey to get to know our audience and gather information #[b(style="color: #E3E000") These are the key findings]
+                .survey
+                    each value, key in surveyStats
+                        .keyfigure.fragment
+                            .name #{value[1]}
+                            .value #{value[0]}
+            section(data-background-iframe="https://ux-berlin.typeform.com/report/H6EPFsn8/gx7VEswGDObAb1qJ")
