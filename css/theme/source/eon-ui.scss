@@ -448,31 +448,29 @@ ul.agenda {
   list-style: none;
   width: 100%;
   margin: 0;
+  display: grid;
+  grid-row-gap: 32px;
 
   li {
-    margin-bottom: 1.25em;
-    display: flex;
+    display: grid;
+    grid-template-columns: 2fr 6fr 4fr;
+    grid-column-gap: 24px;
     text-align: left;
 
     span {
       display: block;
 
       &.time {
-        width: 20%;
         text-align: left;
-        color: rgba(255, 255, 255, .6);
+        color: rgb(255 255 255 / 60%);
       }
 
       &.topic {
-        width: 50%;
-        margin-left: 16px;
         text-align: left;
       }
 
       &.presenter {
-        margin-left: 16px;
-        width: 30%;
-        color: rgba(255, 255, 255, .6);
+        color: rgb(255 255 255 / 60%);
       }
     }
   }
@@ -502,3 +500,15 @@ ul.agenda {
 }
 
 
+.video-wrapper {
+  padding: 48px;
+  video {
+    box-shadow: 0 24px 32px rgb(0 0 0 / 20%);
+    &:hover {
+      box-shadow: 0 32px 48px rgb(0 0 0 / 20%);
+    }
+    &:focus {
+      outline: 0;
+    }
+  }
+}
