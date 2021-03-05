@@ -447,13 +447,14 @@ ul.agenda {
   font-size: .6em;
   list-style: none;
   width: 100%;
-  margin: 0;
+  padding: 0;
   display: grid;
   grid-row-gap: 32px;
+  margin: 64px 0;
 
   li {
     display: grid;
-    grid-template-columns: 2fr 6fr 4fr;
+    grid-template-columns: .9fr .2fr .9fr 8fr 4fr;
     grid-column-gap: 24px;
     text-align: left;
 
@@ -463,6 +464,12 @@ ul.agenda {
       &.time {
         text-align: left;
         color: rgb(255 255 255 / 60%);
+      }
+      &.time-start {
+        text-align: right;
+      }
+      &.time-dash {
+        text-align: center;
       }
 
       &.topic {
