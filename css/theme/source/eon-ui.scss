@@ -429,6 +429,8 @@ p.emoji {
   min-height: 500px;
 }
 
+
+
 // Agenda
 .agenda-container {
   width: 100%;
@@ -451,6 +453,9 @@ ul.agenda {
   display: grid;
   grid-row-gap: 32px;
   margin: 64px 0;
+  &.big {
+    font-size: .75em;
+  }
 
   li {
     display: grid;
