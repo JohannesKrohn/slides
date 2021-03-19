@@ -11,141 +11,14 @@ include _includes/_people
         .slides
             section(data-background="linear-gradient(to right, #B00402, #B00402 5.873%, #D51607 5.873%, #D51607 23.5317%, #EA1B0A 23.5317%)")
                 .content
-                    h1 E.ON Design System, E.ON&nbsp;UI & AEM&nbsp;Foundation&nbsp;2020
+                    h1 Atomic Design @ E.ON&nbsp;UI
                     .logo
                         include _svg/den-invertiert.svg
-            +section(data-state="make-it-pop")
-                h3.left Presenters
+            section(data-background=gradients.darkgreyLTR)
+                h2.right.fragment.fade-out Welcome
+                .people__container.big
+                    +peopleBit("Michael Boss","UX Specialist / Frontend Developer","/img/kurtz-michael.jpg")
 
-                .people__container
-                    +peopleBit(class="fragment" data-fragment-index="1")
-                        .topics.fragment
-                            ul
-                                li Curating the digital styleguide
-                                li Challenges in the corporate environment
-                                li The pattern library with web components
-                    +peopleBit("Michael Kurtz","UX Specialist / Frontend Developer","/img/kurtz-michael.jpg")(class="fragment" data-fragment-index="2")
-                        .topics.fragment
-                            ul
-                                li What are Web Components
-                                li How to use Web Components
-                                li Web Components in Storybook
-                    .people.fragment(data-fragment-index="3")
-                        .avatar
-                            img(src="/img/kutschker-janosch.png")
-                        .info
-                            p.name Janosch Kutschker
-                            p.job-title Product Owner
-                        .topics.fragment
-                            ul
-                                li Web Components in the Adobe Experience Manager (AEM)
-                                li Consolidation & Refactoring of AEM Components
-            section
-                blockquote
-                    p
-                        | The not-so-secret secret about creating effective design systems (or doing any great work, really):
-                        br
-                    p(class="fragment" style="brix-weight: 700; color:#E3E000;") It all comes down to people truly collaborating and communicating with one another.
-                        br
-                    footer.fragment — Brad Frost
-                aside(class="notes")
-                    | I think it is important to keep this in the back of our head, these guidelines build up on the excellent work that has been done and is in progress atm. We see ourselves as the curators for excellence inside the company.
-
-
-            +sectionStack("#E3E000")
-                section(data-background=gradients.limeRTL)
-                    h2.left E.ON UX Platform
-                    br
-                    .fragment
-                        p.abstract.left Our mission is to give all apps and webs #[b one E.ON look & feel.]
-                        p.abstract.left Optimize #[b rankings and conversion rates.]
-                        p.abstract.left Increase usage and #[b simplify usability.]
-                section(data-background="#E3E000")
-                    h2
-                        | Our users are inside
-                        br
-                        | & outside of E.ON
-                    .text-block
-                        p.fragment The Guidelines are the basis for #[b our agencies] and our ambition is to make it easy for them to #[b adhere to the guidelines]
-                        p.fragment For the E.ON web sites we have the #[b content editors & creators] in mind. The brand is based around some #[b sophisticated layout] ideas that are sometime very challenging to get right in the daily work.
-                        p.fragment For the #[b transition from innogy to E.ON] we are trying to provide building blocks that #[b make the rebranding process faster]
-                        p.fragment And, of course, there are the #[b E.ON customers] who want to get something done.
-                section(data-background=gradients.limeLTR)
-                    h3 Our Guides
-                    p.abstract.right.fragment Digital Styleguide
-                    p.abstract.right.fragment Digital Analytics
-                    p.abstract.right.fragment Search Engine Optimisation
-                    p.abstract.right.fragment User testing guidelines
-                    p.abstract.right.fragment.new Advertising
-                    p.abstract.right.fragment.new Motion Design
-                    p.abstract.right.fragment.new Social Media
-                section
-                    h3 A Space to collaborate — eon.frontify.com
-                    .fragment
-                        p.abstract We host an image library with #[span(style="font-weight: 900;") 1810 Assets]
-                        p.abstract We have #[span(style="font-weight: 900;") 871 Users]
-                        p.abstract thereof #[span(style="font-weight: 900;") 272 Authors]
-                        p.abstract in #[span(style="font-weight: 900;") 112 Projects] that are managed by us
-                section(data-background="linear-gradient(to right, #CCCA00, #CCCA00 8.8294%, #DAD600 8.8294%, #DAD600 38.2341%, #E3E000 38.2341%)")
-                    h1 bit.ly/ux-platform
-
-            section(data-background="linear-gradient(to right, #B00402, #B00402 8.8294%, #D51607 8.8294%, #D51607 23.5317%, #EA1B0A 23.5317%)")
-                h1
-                    | UX / UI and the
-                    br
-                    | E.ON Design System
-            section
-                section(data-background=gradients.limeLTR)
-                    h1 Design system
-                    p.right.phonetics {dɪˈzaɪn ˈsɪstɪm}
-                    .text-block
-                        p.abstract.left
-                            | A Design System is a set of #[b interconnected patterns] and #[b shared practices] coherently organized to aid in digital product design and development of products such as #[b apps or websites.]
-                            br
-                            |It may contain, but is not limited to, #[b pattern libraries and design language, style guides, coded components, brand language and documentation] for use of these.
-                        p.right — From Wikipedia, the free encyclopedia
-                section(data-background=gradients.limeRTL)
-                    .illustration-fifty
-                        .content.illustration
-                            h1 What does the Design System do?
-                            .text-block
-                                p.abstract.leftAtomic #[b “People don’t want to buy a quarter-inch drill. They want a quarter-inch hole!”]
-                                p.copy.right — Theodore Levitt, Harvard Business School
-                        .content.figure
-                            img(src="img/quarter-inch-hole.png")
-                section(data-background="#E3E000")
-                    .offset-container
-                        .offset-headline
-                            h3 It's a compass for now and things to come
-                        .text-block
-                            p.abstract.left
-                                | “Design systems provide a convenient, centralized, and #[b evolving map] of a brand’s known product territories with directional pointers to #[b help you explore new regions.”]
-                            p.copy.right — Chris Messina, tech evangelist and former developer experience lead at Uber
-                            p.abstract.left #[b “Understanding not only the what, but the why,] behind the design of a system is critical to creating an #[b exceptional user experience.] Defining and adhering to standards is how we create that understanding.”
-                            p.copy.right — Marco Suarez, product designers at InVision
-                    aside(class="notes")
-                        ul
-                            li One of the key aspects is that the design system is always evolving, reflecting agile ways of working
-                            li it allows iterative approaches while keeping the main concepts in focus
-
-            section
-                section
-                    .offset-container
-                        .offset-headline
-                            h3.lime Our focus for the current cycle
-                        .text-block
-                            p.abstract.left
-                                | Our Styleguide is based on the very detailed #[span(style="font-weight: 900; color: #E3E000") Brand Guidelines] that are maintained by our magnificient Brand Team. These cover many aspects — we focus on the challenges that the digital realm brings.
-                            br
-                            h4.lime.left.fragment Accessibility
-                            h4.lime.left.fragment Usability
-                            h4.lime.left.fragment Consistent User Experience
-                    aside(class="notes")
-                        ul
-                            li You can find guidance around tone of voice etc. on the brand net
-                            li for the current iteration our focus was really to implement the web component technology
-                            li we basically looked at every existing component and reworked / improved when possible / necessary
-                            li we made creating exciting on brand layouts easier and introduced new ways to spice up the layouts
 
             section(data-background=gradients.darkgreyLTR )
                 h1 Atomic Design Principles
@@ -203,120 +76,26 @@ include _includes/_people
             section(data-auto-animate)
                     +fiveAtomicSteps(".3",".3",".3","1",".3")
             section(data-auto-animate)
-                +fiveAtomicSteps("1","1","1","1","1")
-                aside(class="notes")
-                    | Next up we will explore some of the traps and problems with this approach
-            section
-                .isotope-content
-                    .isotope-filters
-                        .button-group(data-filter-group="region")
-                            button.button(data-filter="*") all
-                            button.button(data-filter=".international") International
-                            button.button(data-filter=".CZ") Czechia
-                            button.button(data-filter=".de") Germany
-                            button.button(data-filter=".HU") Hungary
-                            button.button(data-filter=".it") Italy
-                            button.button(data-filter=".PL") Poland
-                            button.button(data-filter=".RO") Romania
-                            button.button(data-filter=".SE") Sweden
-                            button.button(data-filter=".UK") United Kingdom
-                        .button-group(data-filter-group="viewport")
-                            button.button(data-filter="*") all
-                            button.button(data-filter=".desktop") Desktop
-                            button.button(data-filter=".tablet") Tablet
-                            button.button(data-filter=".mobile") Mobile
-                    .grid-wrapper
-                        .image-grid.grid
-                            for img in imgs
-                                .img-container.grid-item(class=img.filter + " " + img.region)
-                                    img(src=img.url)
-                aside(class="notes")
-                    ul
-                        li Each region knows their markets best
-                        li They are constantly working on improving conversion rates
-                        li Nobody is waiting for a Design System to be established
-
-
+                    +fiveAtomicSteps(".3",".3",".3",".3","1")
+            section(data-auto-animate)
+                    +fiveAtomicSteps("1","1","1","1","1")
+            section(data-background=gradients.limeRTL )
+                .offset-container
+                    .offset-headline
+                        h1 E.ON Design System
+                    .text-block
+                        p.copy.left "To set ourselves up for #[b long-term success,] we must fundamentally shift our outlook around what we’re actually creating. Rather than thinking of final applications as our sole responsibility, we must recognize that #[b the design system is what underpins our final products and pattern libraries."]
+                        p.copy.right — Brad Frost
+                        br
+                        .svg-container
+                            include _svg/strategy-02.svg
 
             section
-                section
-                    .offset-container
-                        .offset-headline
-                            h3.lime Challenges in the corporate context
-                        .text-block
-                            p.abstract.left Feature sets form naturally #[b within organizational boundaries,] such as Romania, Italy, eMobility and so on.
-                            p.copy.left In the wild, platform designers in groups A & B made #[b distinct sketch kit extensions,] and an engineer had made #[b a “C Kit” of component code] for their group.
-                            p.copy.left Business units and product lines are #[b motivated to work fast, meet goals, and reuse with their adjacent squads.] System tools can scaffold up rapid, systematic design and development practices to spur groups move forward, #[b without necessarily complicating the system’s core.]
-                            p.copy.cite — Nathan Curtis, Design System Tiers
-                section
-                    .offset-container.fifty
-                        .offset-headline
-                            h3.lime E.ON Design System 2.0 — Legacy
+                h1 The Design System evolution with web components
 
-                        .text-block
-                            p.copy.left
-                                | We created the previous iteration closely with project nelson. The code snippets we hosted on frontify were unfortunenately rather specific and would have forced to stick very close to the tech stack used for project nelson.
-                            p.copy.left
-                                | When the project was finished, there was no real interest and no real need to keep the code library up to date with our design system.
-                            .svg-container
-                                include _svg/strategy.svg
-                section(data-background=gradients.limeRTL )
-                    .offset-container
-                        .offset-headline
-                            h1 E.ON Design System
-                        .text-block
-                            p.copy.left "To set ourselves up for #[b long-term success,] we must fundamentally shift our outlook around what we’re actually creating. Rather than thinking of final applications as our sole responsibility, we must recognize that #[b the design system is what underpins our final products and pattern libraries."]
-                            p.copy.right — Brad Frost
-                            br
-                            .svg-container
-                                include _svg/strategy-02.svg
-
-            section
-
-                section
-                    .offset-container
-                        .offset-headline
-                            h2.lime Design System Artifacts
-                        .text-block
-                            h4.left Design
-                            p.copy The Design system can support projects through all phases.
-                            p.copy To start #[b ideation, prototyping] or while doing a #[b design sprint] we provide a sketch library that gives you a head start with the majority of atoms and many important UI Patterns layed out.
-                            p.copy #[b eon.frontify.com] also provides a project space for aligning in agile ways.
-                        .text-block
-                            h4.left Code
-                            p.copy From our previous evolution of the design system we learned, that being to specific with the technology can render our code snippets obsolete.
-                            p.copy With this iteration we went through the pain of re-doing many components and put them under the microscope to make the web components robust, up to date and versatile.
-                            p.copy The new release creates the link between design assets and web components. Many of the design patterns are also available 1:1 as a web component so no development, reviewing and signing off is needed.
-
-                // frontify screens
-                section
-                    .scroll-container
-                        img(src="img/frontify.png")
-                section
-                    .scroll-container
-                        img(src="img/frontify_buttons.png")
-                section
-                    .scroll-container
-                        img(src="img/frontify-forms.png")
-                section
-                    .scroll-container
-                        img(src="img/frontify-forms-specs.png")
-                section(data-background-video="img/sample-layout.mp4" data-background-video-loop data-background-video-muted)
-            section
-                section
-                    h1 The Design System evolution with web components
-                section(data-background-color="#E3E000")
-                    .svg-container
-                        include _svg/web-components-strategy.svg
-            section(data-background=gradients.darkgreyLTR)
-                h2.right.fragment.fade-out Handing over
-                .people__container.big
-                    +peopleBit("Michael Kurtz","UX Specialist / Frontend Developer","/img/kurtz-michael.jpg")
-                        .topics
-                            ul
-                                li What are Web Components?
-                                li How to use Web Components?
-                                li Web Components and JavaScript frameworks!
+            section(data-background-color="#E3E000")
+                .svg-container
+                    include _svg/web-components-strategy.svg
 
     +scripts
 
